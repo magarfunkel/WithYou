@@ -1,0 +1,197 @@
+/*inicioEstilosTodasLasPaginas*/
+*{padding: 0;
+    margin: 0;
+    border: 0ch;
+}
+/*variables*/
+$FontColor: #1A7564;/*colorBase*/
+$CardBackground: #EBB7E6;/*fondoCards*/
+$Font-face:'Open Sans', sans-serif;
+
+.encabezado{/*header*/
+    height: 7rem;
+    width: 100%;
+    background-color:#FFD687 ;/*fondoHeader*/
+    display: flex;
+    justify-content: space-between;
+    position:sticky;/*encabezadoFijo*/
+    top: 0;
+    z-index: 1030;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    .logo {
+        padding: 5px;
+        margin-left:5vw;
+    }
+    .bg-light {
+        background-color:#FFD687 !important;
+    }
+    .navbar-light {
+        .navbar-toggler {
+            color:$FontColor; /*usoVariables*/
+            border-color:$FontColor;
+        }
+        .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+            color: $FontColor;
+            font-size: 16px;
+        }
+    }
+    ul {
+        list-style: none;/*sacaViñetaLista*/
+        display: flex;
+        justify-content:space-around;
+    }
+    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        background-color: #FFD687;
+    }
+    a {text-decoration: none; /*sacaSubrayadoTodosA*/
+        display: flex;
+        justify-content: space-between;
+    }   
+}/*cierraHeader*/
+.seccion {
+    padding:2rem;
+    background-color:#FFFFBF;
+    .introduccion h1{
+    text-align: center;
+    color:$FontColor;
+    font-family: $Font-face;
+    font-weight: 150;
+    }
+    .introduccion h2{
+    color: $FontColor;
+    padding-top: 5vh;
+    }
+    }
+
+.pieDePagina {
+    background-color:#FF8F52; /*fondoPiePagina*/
+    padding: 2rem;
+    height:100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap ;
+    align-items: center;
+    img {
+    height: 50%;
+    width: 50%;
+    align-items: center;
+    }
+    .redesSociales {
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    flex-direction: row;
+    vertical-align: middle;
+    }
+}
+/*finEstilosTodasLasPaginas*/  
+
+/*estilosHome*/
+.main {
+    display: flex;
+}
+.texto {
+    color:$FontColor ;
+    margin-left: 20px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    padding: 2px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.imagenPortada {
+    width: 50%;
+    height: 50%;
+}
+/*finEstilosHome*/
+
+/*estilosPrimerosPasos*/
+#seccionDegrade {
+    background: linear-gradient(#FFFFBF,#FF8F52);
+    .primerosPasos {
+        width: 50%;
+        height: 50%;
+        padding: 50px 0 50px 0;
+        display: block;
+        margin: auto;
+    }
+    ul{
+        li{
+            p{margin-bottom: 0 !important;
+                a {
+        color: $FontColor;
+                }
+            }
+        }
+    }
+}
+    
+/*finEstilosPrimerosPasos*/
+
+/*estilosDerechos*/
+.row {
+    display:flex; 
+        justify-content: space-around;
+        width:100%;
+        height: auto;
+        background: #FFFFBF;
+    .col-sm-6 { 
+        .card {
+            display:flex; 
+            justify-content: space-around;
+            background: #FFFFBF;
+            border: $FontColor;
+            padding-top: 2rem !important;
+            .card-body{
+                background-color: $CardBackground;
+                border: 2px solid 
+                        $FontColor;
+                border-radius: 40px 0;        
+                height: fit-content;
+                padding: 2rem 2rem;
+                .card-title{
+                    color:$FontColor;
+                }
+                .card-text{
+                    color:$FontColor;
+                }
+                    .btn-primary { /*botonInactivo*/
+                        border-color:$FontColor;
+                        background: $FontColor;
+                        border-radius: 15px 0 ;
+                        }
+                    &:focus {/*botonActivo*/
+                        border-color: $FontColor;
+                        background: $FontColor;
+                        border-radius: 15px 0 ;
+                        outline-style: none;
+                        box-shadow: none;
+                        }
+                    }
+        }
+        .modal{/*estilosModal*/
+            background:#FFD687;
+            }
+        .show .modal-dialog {
+                transform: none;
+            }
+        .modal.fade .modal-dialog{
+                padding-top: 5vh;
+                .modal-content{
+                    color: $FontColor;
+                    background: $CardBackground;
+                }
+            } 
+    }
+}
+/*finEstilosDerechos*/
+
+/*obligaciones*/
+@each $imgObligaciones in conPerro, Cansado {
+    .#{$imgObligaciones} {
+        width: 50%;
+        display: block;
+        margin: auto;
+    }  
+} 

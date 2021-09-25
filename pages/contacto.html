@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../styles/estilos.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="encabezado"><!--AbreHeader--> 
+        <a class="navbar-brand" href="../index.html"> <!--logo-->
+            <img id="logo" src="../assets/logo.png" alt="logo">
+        </a>        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>  
+        <nav class="navbar navbar-expand-lg navbar-light bg-light"><!--menuNavegacion-->
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../pages/primerospasos.html">Primeros Pasos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active"aria-current="page" href="../pages/derechos.html">Derechos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../pages/obligaciones.html">Obligaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>       
+    </header> <!--cierraHeader-->
+    <section class="seccion" id="gridContacto"> <!--empiezaGrilla-->
+        <div class="introduccion">
+            <h1>Contactanos</h1>
+        </div>
+        <img class="imagenContacto" src="../assets/LlueveSobreMojado.png" alt="lloviendo" >
+        <form class="formulario" action ="type" method="POST" >
+        <legend>Datos de contacto</legend>
+        <fieldset>
+            <input type="text" name="" placeholder="Nombre" id="input">
+            <input type="email" name="" placeholder="nombre@ejemplo.com" id="input">
+        </fieldset>  
+        <div id="flexEdad">
+            <p >Edad</p>
+                <select name="">
+                    <option value="">menos de 20</option>
+                    <option value="">entre 21 y 30</option>
+                    <option value="">entre 31 y 40</option>
+                    <option value="">mayor de 41</option>
+                </select>
+        </div>
+        <div id="sexo">
+            <p>Sexo</p>
+            <div class="sexo">
+                <label for="femenino">Femenino</label>
+                    <input type="radio" name="sexo"id="femenino">
+                <label for="masculino">Masculino</label>
+                    <input type="radio" name="sexo"id="masculino">
+            </div> 
+        </div>
+        <div id="comentarios" >   
+            <p>Comentarios </p><textarea name=""id=""cols="47rem"rows="10px"></textarea>
+        </div>     
+            <br>
+            <div id="botones">
+                <input type="submit">
+                <input type="reset">
+            </div>  
+        </form>
+    </section><!--cierraSeccion-->
+    <footer class="pieDePagina"> <!--pieDePagina-->
+        <a href="htpps://www.afip.com.ar"><!--logoLinkAfip-->
+            <img class="afip" src="../assets/qrAfip.png" alt="afip">
+        </a>
+        <div class="redesSociales"><!--accesosRedesSociales-->
+                <a href="https://www.facebook.com">
+            <img  class="facebook" src="../assets/facebook.png" alt="facebook">
+            </a>
+            <a href="https://www.whatsapp.com">
+                <img src="../assets/whatsapp.png" alt="whatsapp">
+                </a>
+            <a href="https://www.instagram.com">
+                <img src="../assets/instagram.png" alt="instagram">
+            </a>
+            <a href="https://twitter.com" alt="twitter">
+                <img src="../assets/twitter.png" alt="twitter">
+            </a>
+        </div>
+    </footer><!--cierraPiePagina-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script><!--script-->
+</body><!--cierraBody-->
+</html>
