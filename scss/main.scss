@@ -185,10 +185,10 @@ footer {
 /*estilosDerechos*/
 .row {
     display:flex; 
-        justify-content: space-around;
-        width:100%;
-        height: auto;
-        background: #FFFFBF;
+    justify-content: space-around;
+    width:100%;
+    height: auto;
+    background: #FFFFBF;
     .col-sm-6 { 
         .card {
             display:flex; 
@@ -228,7 +228,7 @@ footer {
             }
         .show .modal-dialog {
                 transform: none;
-            }
+                        }
         .modal.fade .modal-dialog{
                 padding-top: 5vh;
                 .modal-content{
@@ -238,7 +238,21 @@ footer {
             } 
     }
 }
+.seccion {
+    .center{
+        margin-left: 25%;
+            ul {
+                li {
+                    color: $FontColor;
+                    font-family: 'Times New Roman', Times, serif;
+                    font-size: 18px;
+                }
+        }
+    }
+}
+
 /*finEstilosDerechos*/
+
 
 /*obligaciones*/
 @each $imgObligaciones in conPerro, Cansado {

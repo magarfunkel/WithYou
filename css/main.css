@@ -303,6 +303,16 @@ footer .copyright {
   background: #EBB7E6;
 }
 
+.seccion .center {
+  margin-left: 25%;
+}
+
+.seccion .center ul li {
+  color: #1A7564;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+}
+
 /*finEstilosDerechos*/
 /*obligaciones*/
 .conPerro {
