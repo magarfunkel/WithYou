@@ -226,7 +226,7 @@ footer .copyright {
 }
 
 /*finEstilosPrimerosPasos*/
-/*estilosDerechos*/
+/*estilosDerechosDeberes*/
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -314,16 +314,18 @@ footer .copyright {
 }
 
 /*finEstilosDerechos*/
-/*obligaciones*/
-.conPerro {
-  width: 50%;
-  display: block;
-  margin: auto;
+/*estilosTransitandoElDuelo*/
+.card {
+  border: 5px solid #EBB7E6;
+  background: #EBB7E6;
 }
 
-.Cansado {
-  width: 50%;
-  display: block;
-  margin: auto;
+.card .card-body a {
+  color: #1A7564;
+  text-decoration: none;
+}
+
+.card .card-body p {
+  color: #1A7564;
 }
 /*# sourceMappingURL=main.css.map */

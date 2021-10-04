@@ -182,7 +182,7 @@ footer {
     
 /*finEstilosPrimerosPasos*/
 
-/*estilosDerechos*/
+/*estilosDerechosDeberes*/
 .row {
     display:flex; 
     justify-content: space-around;
@@ -250,15 +250,20 @@ footer {
         }
     }
 }
-
 /*finEstilosDerechos*/
 
-
-/*obligaciones*/
-@each $imgObligaciones in conPerro, Cansado {
-    .#{$imgObligaciones} {
-        width: 50%;
-        display: block;
-        margin: auto;
-    }  
-} 
+/*estilosTransitandoElDuelo*/
+.card{
+    border: 5px solid #EBB7E6;
+    background: $CardBackground;
+    .card-body{
+        a {
+            color: $FontColor;
+            text-decoration: none;
+        }
+        p {
+            color: $FontColor;
+        } 
+    }
+}
+        
