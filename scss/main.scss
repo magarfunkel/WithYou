@@ -9,7 +9,7 @@ $CardBackground: #EBB7E6;/*fondoCards*/
 $Font-face:'Open Sans', sans-serif;
 
 .encabezado{/*header*/
-    height: 7rem;
+    height: 4rem;
     width: 100%;
     background-color:#FFD687 ;/*fondoHeader*/
     display: flex;
@@ -63,7 +63,6 @@ $Font-face:'Open Sans', sans-serif;
     padding-top: 5vh;
     }
 }
-
 footer {
     bottom: 0;
     left: 0;
@@ -71,73 +70,75 @@ footer {
     div.social-media-links {
         background-color: #FF8F52;
         overflow: hidden;
-        padding-bottom: 4px;
         text-align: center;
-    }
-    div.social-media-links ul {
-        margin: 0;
-        padding: 0;
-    }
-    div.social-media-links li {
-        display: inline;
-        margin: 0;
-        padding: 0;
-    }
-    div.social-media-links a {
-        border-bottom: 0px solid rgba(0,0,0,0.95) ;
-        border-radius: 4px;
-        box-shadow: inset 0 -3px 0 0 rgba(0,0,0,0), 0 6px 8px rgba(0, 0, 0, 0), 0 24px 24px rgba(0, 0, 0, 0),
-        0 36px 36px rgba(0, 0, 0, 0), 0 64px 64px rgba(0, 0, 0, 0), 0 64px 128px rgba(0, 0, 0, 0),
-        0 120px 0 rgba(0, 0, 0, 0), 0 86px 8px 6px rgba(0, 0, 0, 0);
-        display: inline-block;
-        height: 30px;
-        padding: 20px;
-        position: relative;
-        -webkit-transition: 0.2s ease-in;
-        transition: 0.2s ease-in;
-        width: 30px;
-    }
-    div.social-media-links a svg {
-        left: 20px;
-        position: absolute;
-        top: 20px;
-        height: 30px;
-        width: 30px;
-    }
-    div.social-media-links a svg.glow path,
-    div.social-media-links a svg.glow circle {
-        fill: rgba(0, 0, 0, 0);
-    }
-    div.social-media-links a svg path,
-    div.social-media-links a svg circle {
-        fill: #1A7564;
-        -webkit-transition: 0.2s ease-in;
-        transition: 0.2s ease-in;
-    }
-    div.social-media-links a:hover {
-        -webkit-transform: translateY(-4px);
-                transform: translateY(-4px); 
-        box-shadow: inset 0 -3px 0 0 #1A7564;
-    }
-    div.social-media-links a:hover svg.glow {
-        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><f…ter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
-        -webkit-filter: blur(2px);
+        color: #1A7564;
+        padding-top: 0.7rem;
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            display: inline;
+            margin: 0;
+            padding: 0 20px; 
+        }
+        a{
+            border-bottom: 0px solid rgba(0,0,0,0.95) ;
+            border-radius: 4px;
+            box-shadow: inset 0 -3px 0 0 rgba(0,0,0,0), 0 6px 8px rgba(0, 0, 0, 0), 0 24px 24px rgba(0, 0, 0, 0),
+            0 36px 36px rgba(0, 0, 0, 0), 0 64px 64px rgba(0, 0, 0, 0), 0 64px 128px rgba(0, 0, 0, 0),
+            0 120px 0 rgba(0, 0, 0, 0), 0 86px 8px 6px rgba(0, 0, 0, 0);
+            display: initial;
+            height: 30px;
+            padding: 20px;
+            position: relative;
+            -webkit-transition: 0.2s ease-in;
+            transition: 0.2s ease-in;
+            width: 30px; 
+            svg {
+                left: 20px;
+                position: absolute;
+                top: 20px;
+                height: 30px;
+                width: 30px;
+                .glow path,
+                .glow circle{
+                    fill: rgba(0, 0, 0, 0);
+                }
+                path,
+                circle {
+                    fill: #1A7564;
+                    -webkit-transition: 0.2s ease-in;
+                    transition: 0.2s ease-in;
+                }
+            }
+        }
+        a:hover {
+            -webkit-transform: translateY(-4px);
+            transform: translateY(-4px); 
+            box-shadow: inset 0 -3px 0 0 #1A7564;
+            svg.glow{
+                filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><f…ter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
+                -webkit-filter: blur(2px);
                 filter: blur(2px);
-    }
-    div.social-media-links a:hover svg.glow path,
-    div.social-media-links a:hover svg.glow circle {
-        fill: fadeout ( #1A7564c7, 40)
-    }
-    div.social-media-links a:hover svg path,
-    div.social-media-links a:hover svg circle {
-        fill: #1A7564c7;
-    }
-    .copyright {
-        color: $FontColor;
-        padding-top: 1em;
+                path, 
+                circle{
+                    fill: fadeout ( #1A7564c7, 40)
+                }
+            }
+            svg path,
+            & circle {
+                fill:#1A7564c7;
+            }
+        }
+        p.copy {
+            margin-top: 0px;
+            color: $FontColor;
+            padding-top: 1em;
+            
+        }
     }
 }
-
 /*finEstilosTodasLasPaginas*/  
 
 /*estilosHome*/
@@ -160,14 +161,30 @@ footer {
 /*finEstilosHome*/
 
 /*estilosPrimerosPasos*/
-#seccionDegrade {
+.seccionDegrade {
     background: linear-gradient(#FFFFBF,#FF8F52);
+    padding:2rem;
     .primerosPasos {
         width: 50%;
         height: 50%;
         padding: 50px 0 50px 0;
         display: block;
         margin: auto;
+        img{
+            with: 40%;
+        }
+    }
+    h1{
+        text-align: center;
+        padding-bottom: 1px;
+        color:$FontColor;
+    }
+    h3{
+        padding: 1rem 0;
+        color:$FontColor;
+    }
+    p{
+        color:$FontColor;
     }
     ul{
         li{
@@ -177,9 +194,19 @@ footer {
                 }
             }
         }
+    
+    }
+    .center{
+        margin-left: 25%;
+            ul {
+                li {
+                    color: $FontColor;
+                    font-family: 'Times New Roman', Times, serif;
+                    font-size: 18px;
+            }
+        }
     }
 }
-    
 /*finEstilosPrimerosPasos*/
 
 /*estilosDerechosDeberes*/
@@ -188,7 +215,7 @@ footer {
     justify-content: space-around;
     width:100%;
     height: auto;
-    background: #FFFFBF;
+    padding-top: 1rem;
     .col-sm-6 { 
         .card {
             display:flex; 
@@ -238,24 +265,20 @@ footer {
             } 
     }
 }
-.seccion {
-    .center{
-        margin-left: 25%;
-            ul {
-                li {
-                    color: $FontColor;
-                    font-family: 'Times New Roman', Times, serif;
-                    font-size: 18px;
-                }
-        }
-    }
-}
+/*.seccionDegrade{
+    padding: 2.5rem;
+    background: linear-gradient(#FFFFBF,#FF8F52);
+    color: $FontColor;*/
+    
+    
+
 /*finEstilosDerechos*/
 
 /*estilosTransitandoElDuelo*/
-.card{
+.cardDuelo{
     border: 5px solid #EBB7E6;
     background: $CardBackground;
+    height: 100%;
     .card-body{
         a {
             color: $FontColor;

@@ -11,7 +11,7 @@
 /*fondoCards*/
 .encabezado {
   /*header*/
-  height: 7rem;
+  height: 4rem;
   width: 100%;
   background-color: #FFD687;
   /*fondoHeader*/
@@ -102,8 +102,9 @@ footer {
 footer div.social-media-links {
   background-color: #FF8F52;
   overflow: hidden;
-  padding-bottom: 4px;
   text-align: center;
+  color: #1A7564;
+  padding-top: 0.7rem;
 }
 
 footer div.social-media-links ul {
@@ -114,7 +115,7 @@ footer div.social-media-links ul {
 footer div.social-media-links li {
   display: inline;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
 }
 
 footer div.social-media-links a {
@@ -122,7 +123,7 @@ footer div.social-media-links a {
   border-radius: 4px;
   -webkit-box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0), 0 6px 8px rgba(0, 0, 0, 0), 0 24px 24px rgba(0, 0, 0, 0), 0 36px 36px rgba(0, 0, 0, 0), 0 64px 64px rgba(0, 0, 0, 0), 0 64px 128px rgba(0, 0, 0, 0), 0 120px 0 rgba(0, 0, 0, 0), 0 86px 8px 6px rgba(0, 0, 0, 0);
           box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0), 0 6px 8px rgba(0, 0, 0, 0), 0 24px 24px rgba(0, 0, 0, 0), 0 36px 36px rgba(0, 0, 0, 0), 0 64px 64px rgba(0, 0, 0, 0), 0 64px 128px rgba(0, 0, 0, 0), 0 120px 0 rgba(0, 0, 0, 0), 0 86px 8px 6px rgba(0, 0, 0, 0);
-  display: inline-block;
+  display: initial;
   height: 30px;
   padding: 20px;
   position: relative;
@@ -139,8 +140,8 @@ footer div.social-media-links a svg {
   width: 30px;
 }
 
-footer div.social-media-links a svg.glow path,
-footer div.social-media-links a svg.glow circle {
+footer div.social-media-links a svg .glow path,
+footer div.social-media-links a svg .glow circle {
   fill: rgba(0, 0, 0, 0);
 }
 
@@ -170,11 +171,12 @@ footer div.social-media-links a:hover svg.glow circle {
 }
 
 footer div.social-media-links a:hover svg path,
-footer div.social-media-links a:hover svg circle {
+footer div.social-media-links a:hover circle {
   fill: #1A7564c7;
 }
 
-footer .copyright {
+footer div.social-media-links p.copy {
+  margin-top: 0px;
   color: #1A7564;
   padding-top: 1em;
 }
@@ -204,12 +206,13 @@ footer .copyright {
 
 /*finEstilosHome*/
 /*estilosPrimerosPasos*/
-#seccionDegrade {
+.seccionDegrade {
   background: -webkit-gradient(linear, left top, left bottom, from(#FFFFBF), to(#FF8F52));
   background: linear-gradient(#FFFFBF, #FF8F52);
+  padding: 2rem;
 }
 
-#seccionDegrade .primerosPasos {
+.seccionDegrade .primerosPasos {
   width: 50%;
   height: 50%;
   padding: 50px 0 50px 0;
@@ -217,12 +220,41 @@ footer .copyright {
   margin: auto;
 }
 
-#seccionDegrade ul li p {
+.seccionDegrade .primerosPasos img {
+  with: 40%;
+}
+
+.seccionDegrade h1 {
+  text-align: center;
+  padding-bottom: 1px;
+  color: #1A7564;
+}
+
+.seccionDegrade h3 {
+  padding: 1rem 0;
+  color: #1A7564;
+}
+
+.seccionDegrade p {
+  color: #1A7564;
+}
+
+.seccionDegrade ul li p {
   margin-bottom: 0 !important;
 }
 
-#seccionDegrade ul li p a {
+.seccionDegrade ul li p a {
   color: #1A7564;
+}
+
+.seccionDegrade .center {
+  margin-left: 25%;
+}
+
+.seccionDegrade .center ul li {
+  color: #1A7564;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
 }
 
 /*finEstilosPrimerosPasos*/
@@ -235,7 +267,7 @@ footer .copyright {
       justify-content: space-around;
   width: 100%;
   height: auto;
-  background: #FFFFBF;
+  padding-top: 1rem;
 }
 
 .row .col-sm-6 .card {
@@ -303,29 +335,24 @@ footer .copyright {
   background: #EBB7E6;
 }
 
-.seccion .center {
-  margin-left: 25%;
-}
-
-.seccion .center ul li {
-  color: #1A7564;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 18px;
-}
-
+/*.seccionDegrade{
+    padding: 2.5rem;
+    background: linear-gradient(#FFFFBF,#FF8F52);
+    color: $FontColor;*/
 /*finEstilosDerechos*/
 /*estilosTransitandoElDuelo*/
-.card {
+.cardDuelo {
   border: 5px solid #EBB7E6;
   background: #EBB7E6;
+  height: 100%;
 }
 
-.card .card-body a {
+.cardDuelo .card-body a {
   color: #1A7564;
   text-decoration: none;
 }
 
-.card .card-body p {
+.cardDuelo .card-body p {
   color: #1A7564;
 }
 /*# sourceMappingURL=main.css.map */
