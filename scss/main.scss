@@ -186,18 +186,9 @@ footer {
     p{
         color:$FontColor;
     }
-    ul{
-        li{
-            p{margin-bottom: 0 !important;
-                a {
-        color: $FontColor;
-                }
-            }
-        }
-    
-    }
     .center{
-        margin-left: 25%;
+        margin-left: 15%;
+        padding-right: 10%;
             ul {
                 li {
                     color: $FontColor;
@@ -236,42 +227,35 @@ footer {
                 .card-text{
                     color:$FontColor;
                 }
-                    .btn-primary { /*botonInactivo*/
-                        border-color:$FontColor;
-                        background: $FontColor;
-                        border-radius: 15px 0 ;
-                        }
-                    &:focus {/*botonActivo*/
-                        border-color: $FontColor;
-                        background: $FontColor;
-                        border-radius: 15px 0 ;
-                        outline-style: none;
-                        box-shadow: none;
-                        }
-                    }
+                .btn-primary { /*botonInactivo*/
+                    border-color:$FontColor;
+                    background: $FontColor;
+                    border-radius: 15px 0 ;
+                }
+                &:focus {/*botonActivo*/
+                    border-color: $FontColor;
+                    background: $FontColor;
+                    border-radius: 15px 0 ;
+                    outline-style: none;
+                    box-shadow: none;
+                }
+            }
         }
         .modal{/*estilosModal*/
             background:#FFD687;
-            }
+        }
         .show .modal-dialog {
-                transform: none;
-                        }
+            transform: none;
+        }
         .modal.fade .modal-dialog{
-                padding-top: 5vh;
-                .modal-content{
-                    color: $FontColor;
-                    background: $CardBackground;
-                }
-            } 
+            padding-top: 5vh;
+            .modal-content{
+                color: $FontColor;
+                background: $CardBackground;
+            }
+        } 
     }
 }
-/*.seccionDegrade{
-    padding: 2.5rem;
-    background: linear-gradient(#FFFFBF,#FF8F52);
-    color: $FontColor;*/
-    
-    
-
 /*finEstilosDerechos*/
 
 /*estilosTransitandoElDuelo*/

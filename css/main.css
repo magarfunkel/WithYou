@@ -221,7 +221,7 @@ footer div.social-media-links p.copy {
 }
 
 .seccionDegrade .primerosPasos img {
-  with: 40%;
+  width: 40%;
 }
 
 .seccionDegrade h1 {
@@ -239,16 +239,9 @@ footer div.social-media-links p.copy {
   color: #1A7564;
 }
 
-.seccionDegrade ul li p {
-  margin-bottom: 0 !important;
-}
-
-.seccionDegrade ul li p a {
-  color: #1A7564;
-}
-
 .seccionDegrade .center {
-  margin-left: 25%;
+  margin-left: 15%;
+  padding-right: 10%;
 }
 
 .seccionDegrade .center ul li {
@@ -335,10 +328,6 @@ footer div.social-media-links p.copy {
   background: #EBB7E6;
 }
 
-/*.seccionDegrade{
-    padding: 2.5rem;
-    background: linear-gradient(#FFFFBF,#FF8F52);
-    color: $FontColor;*/
 /*finEstilosDerechos*/
 /*estilosTransitandoElDuelo*/
 .cardDuelo {
