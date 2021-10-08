@@ -62,6 +62,17 @@ $Font-face:'Open Sans', sans-serif;
     color: $FontColor;
     padding-top: 5vh;
     }
+    .center{
+        margin-left: 15%;
+        padding-right: 10%;
+        ul {
+            li {
+                color: $FontColor;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 18px;
+            }
+        }
+    }
 }
 footer {
     bottom: 0;
@@ -189,11 +200,11 @@ footer {
     .center{
         margin-left: 15%;
         padding-right: 10%;
-            ul {
-                li {
-                    color: $FontColor;
-                    font-family: 'Times New Roman', Times, serif;
-                    font-size: 18px;
+        ul {
+            li {
+                color: $FontColor;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 18px;
             }
         }
     }
@@ -272,5 +283,4 @@ footer {
             color: $FontColor;
         } 
     }
-}
-        
+}    
