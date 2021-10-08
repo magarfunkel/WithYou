@@ -355,4 +355,254 @@ footer div.social-media-links p.copy {
 .cardDuelo .card-body p {
   color: #1A7564;
 }
+
+/*estilosContactos*/
+.formulario {
+  /*formularioDatosContacto*/
+  grid-area: form;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'roboto';
+  font-size: 1.4vw;
+  width: 50vw;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 30px 40px;
+  border-radius: 4rem;
+  top: 50%;
+  left: 50%;
+  background: #EBB7E6;
+}
+
+.formulario legend {
+  text-align: center;
+  font-weight: 600;
+}
+
+.formulario input {
+  border: 0;
+  background: none;
+  text-align: center;
+  border: 2px solid #1A7564;
+  padding: 10px 5px;
+  width: 16vw;
+  outline: none;
+  border-radius: 10rem;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.formulario input[type="text"]:focus, .formulario input[type="email"]:focus {
+  /*efectoAlClickearNombreEmail*/
+  width: 280px;
+  border-color: #FF8F52;
+}
+
+.formulario input[type="submit"]:hover, .formulario input[type="reset"]:hover {
+  /*cambiarColorClickear*/
+  background: #1A7564;
+  color: #FFD687;
+  font-size: 16px;
+}
+
+.formulario #botones {
+  padding: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.formulario #botones input {
+  width: 7rem;
+  height: auto;
+  font-size: 12px;
+}
+
+.formulario fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.formulario #input {
+  margin: 10px 10px 5px 10px;
+  font-size: 95%;
+}
+
+.formulario select {
+  font-size: small;
+  border: solid 2px #1A7564;
+  border-radius: 2rem;
+  background: #EBB7E6;
+  color: #1A7564;
+  outline-style: none;
+}
+
+.formulario .comentarios {
+  padding-left: 2%;
+}
+
+.formulario .comentarios textarea {
+  border-radius: 1rem;
+  margin-top: 2%;
+  width: 95%;
+}
+
+/*finEstilosContacto*/
+/*empiezaMediaQuery*/
+@media only screen and (max-width: 600px) {
+  /*pantallaChica*/
+  .menu a {
+    margin: auto;
+  }
+  ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .seccion {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .imagenContacto {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /*pantallaMediana*/
+  #gridContacto {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+    -ms-grid-rows: 1fr 4fr;
+        grid-template-rows: 1fr 4fr;
+        grid-template-areas: "introduccion introduccion" "form img";
+  }
+  .imagenContacto {
+    width: 100%;
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: img;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .introduccion {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: introduccion;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  ul {
+    font-size: 20px;
+  }
+  .texto {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  /*pantallaGrande*/
+  .texto {
+    font-size: 1.7vw;
+  }
+  #gridContacto {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 2fr;
+        grid-template-columns: 2fr 2fr;
+    -ms-grid-rows: 1fr 4fr;
+        grid-template-rows: 1fr 4fr;
+        grid-template-areas: "introduccion introduccion" "form img";
+  }
+  .imagenContacto {
+    width: 100%;
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: img;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .introduccion {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: introduccion;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+ul {
+  font-size: 20px;
+}
+
+.imagenContacto {
+  width: 100%;
+  grid-area: img;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.introduccion {
+  grid-area: introduccion;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+ul {
+  font-size: 20px;
+}
 /*# sourceMappingURL=main.css.map */
