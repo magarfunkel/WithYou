@@ -1,12 +1,12 @@
 /*inicioEstilosTodasLasPaginas*/
-*{padding: 0;
+*{padding: 0; /*sacoLoPredeterminado*/
     margin: 0;
     border: 0ch;
 }
 /*variables*/
 $FontColor: #1A7564;/*colorBase*/
 $CardBackground: #EBB7E6;/*fondoCards*/
-$Font-face:'Open Sans', sans-serif;
+$Font-face:'Open Sans', sans-serif; /*fuente*/
 
 .encabezado{/*header*/
     height: 4rem;
@@ -23,7 +23,7 @@ $Font-face:'Open Sans', sans-serif;
         padding: 5px;
         margin-left:5vw;
     }
-    .bg-light {
+    .bg-light { /*menuDeNavegacion*/
         background-color:#FFD687 !important;
     }
     .navbar-light {
@@ -47,9 +47,9 @@ $Font-face:'Open Sans', sans-serif;
     a {text-decoration: none; /*sacaSubrayadoTodosA*/
         display: flex;
         justify-content: space-between;
-    }   
+    } /*terminaMenuNavegacion*/  
 }/*cierraHeader*/
-.seccion {
+.seccion { /*homeDerechosDueloContacto*/
     padding:2rem;
     background-color:#FFFFBF;
     .introduccion h1{
@@ -74,7 +74,7 @@ $Font-face:'Open Sans', sans-serif;
         }
     }
 }
-footer {
+footer { /*footerUnico*/
     bottom: 0;
     left: 0;
     right: 0;
@@ -195,7 +195,10 @@ footer {
         color:$FontColor;
     }
     p{
+        .texto{
         color:$FontColor;
+        font-size: 18px;
+        }
     }
     .center{
         margin-left: 15%;
@@ -274,6 +277,7 @@ footer {
     border: 5px solid #EBB7E6;
     background: $CardBackground;
     height: 100%;
+    border-radius: 0.6rem;
     .card-body{
         a {
             color: $FontColor;
@@ -284,6 +288,8 @@ footer {
         } 
     }
 }    
+/*finTransitandoElDuelo*/
+
 /*estilosContactos*/
 .formulario {/*formularioDatosContacto*/
     grid-area: form;
@@ -294,13 +300,14 @@ footer {
     width: 50vw;
     height:max-content;
     padding: 30px 40px;
-    border-radius: 4rem; 
+    border-radius: 0.6rem; 
     top: 50%;
     left: 50%;
     background: #EBB7E6;
     legend {
         text-align: center;
         font-weight: 600;
+        color: $FontColor;
     }
     input{
         border: 0;
@@ -310,7 +317,7 @@ footer {
         padding: 10px 5px;
         width: 16vw;
         outline: none;
-        border-radius: 10rem;
+        border-radius: 0.6rem;
         transition: 0.25s;
     }
     input[type="text"]:focus, input[type="email"]:focus { /*efectoAlClickearNombreEmail*/
@@ -326,13 +333,15 @@ footer {
         padding: 2%;
         display: flex;
         justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
         input{ 
             width: 7rem;
             height: auto;
             font-size: 12px;
         }
     }
-    fieldset{
+    fieldset {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -340,6 +349,7 @@ footer {
     #input{
         margin: 10px 10px 5px 10px;
         font-size: 95%;
+        color: $FontColor;
     }
     select{
         font-size:small;
@@ -351,14 +361,16 @@ footer {
     }
     .comentarios {
         padding-left: 2%;
+        color: $FontColor;
         textarea {
-        border-radius: 1rem;
+        border-radius: 0.6rem;
         margin-top: 2%;
         width: 95%;
         }
     }
 }
 /*finEstilosContacto*/
+
 /*empiezaMediaQuery*/
 @media only screen and (max-width: 600px){ /*pantallaChica*/
     .menu a{
@@ -375,6 +387,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0.2rem;
     }
     .imagenContacto {
         display: none;
@@ -400,14 +413,16 @@ footer {
         justify-self: center;
         align-self:center;
     }
-    ul {font-size: 20px;
+    ul {
+        font-size: 20px;
     }
     .texto{
         font-size: 16px;
     }
 }
 @media only screen and (min-width:992px){ /*pantallaGrande*/
-    .texto{font-size: 1.7vw;
+    .texto{
+        font-size: 18px;
     }
     #gridContacto {
         display: grid;
@@ -427,23 +442,5 @@ footer {
         grid-area: introduccion;
         justify-self: center;
         align-self:center;
-    }
+    }              
 }
-    ul {font-size: 20px;
-    }                       
-    .imagenContacto {
-        width:100%;
-        grid-area:img;
-        justify-self: center;
-        align-self:center;
-    }
-    .introduccion {
-        grid-area: introduccion;
-        justify-self: center;
-        align-self:center;
-    }
-
-    ul {font-size: 20px;
-}
-
-
