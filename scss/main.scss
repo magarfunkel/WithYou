@@ -55,8 +55,8 @@ $Font-face:'Open Sans', sans-serif; /*fuente*/
     .introduccion h1{
     text-align: center;
     color:$FontColor;
-    font-family: $Font-face;
-    font-weight: 150;
+    font-family:'pacifico';
+    padding-bottom: 2rem;
     }
     .introduccion h2{
     color: $FontColor;
@@ -155,11 +155,11 @@ footer { /*footerUnico*/
 /*estilosHome*/
 .main {
     display: flex;
+    img:90%;
 }
 .texto {
     color:$FontColor ;
     margin-left: 20px;
-   /* margin-top: 35px;*/
     margin-bottom: 20px;
     padding: 2px;
     font-size: 18px;
@@ -168,6 +168,55 @@ footer { /*footerUnico*/
 .imagenPortada {
     width: 50%;
     height: 50%;
+}
+.utiles{
+    background-color: #FFD687;
+    color: $FontColor;
+    padding: 2rem;
+    h2{
+        font-family: 'pacifico';
+        text-align: center;
+    }
+    .ulGrid{ /*contenedorGrid*/
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "1 2 3"
+                    "4 5 6"
+                    "7 8 9";
+        ul{
+            list-style: none;
+            #1{
+                grid-area: 1;
+            }
+            #2{
+                grid-area: 2;
+            }
+            #3{
+                grid-area: 3;
+            }
+            #4{
+                grid-area:4;
+            }
+            #5{
+                grid-area: 5;
+            }
+            #6{
+                grid-area: 6;
+            }
+            #7{
+                grid-area: 7;
+            }
+            #8{
+                grid-area: 8;
+            }
+            #9{
+                grid-area: 9;
+            }
+        }
+    }
 }
 /*finEstilosHome*/
 
@@ -429,7 +478,7 @@ footer { /*footerUnico*/
         grid-template-areas: 
                             "introduccion introduccion"
                             "form img";
-    }
+        }
     .imagenContacto {
         width:100%;
         grid-area:img;
