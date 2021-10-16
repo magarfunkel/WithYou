@@ -155,14 +155,11 @@ footer { /*footerUnico*/
 /*estilosHome*/
 .main {
     display: flex;
-    img:90%;
 }
 .texto {
     color:$FontColor ;
-    margin-left: 20px;
     margin-bottom: 20px;
-    padding: 2px;
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Times New Roman', Times, serif;
 }
 .imagenPortada {
@@ -173,22 +170,21 @@ footer { /*footerUnico*/
     background-color: #FFD687;
     color: $FontColor;
     padding: 2rem;
+    width: 100%;
     h2{
         font-family: 'pacifico';
         text-align: center;
+        padding-bottom: 3rem;
     }
     .ulGrid{ /*contenedorGrid*/
-        height: 100%;
         width: 100%;
-        display: grid;
-        grid-template-columns: auto auto auto;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: "1 2 3"
-                    "4 5 6"
-                    "7 8 9";
         ul{
             list-style: none;
-            #1{
+            height: 350px;
+            width:100%;
+            font-size: 20px;
+            padding-right: 2rem;
+            #1{/*identificacion DeAreas*/
                 grid-area: 1;
             }
             #2{
@@ -215,6 +211,25 @@ footer { /*footerUnico*/
             #9{
                 grid-area: 9;
             }
+            display: grid;
+            grid-template-areas: "1 2 3" /*asignacionDeAreas*/
+                                "4 5 6"
+                                "7 8 9";
+            grid-template-columns: 1fr 1fr 1fr; /*3columnas*/
+            grid-template-rows: 1fr 1fr 1fr; /*3filas*/
+            grid-row-gap: 15px;
+            grid-column-gap:15px;
+            li{/*estilosCeldas*/
+                background-color:#FF8F52;
+                border-radius: 2%;
+                a{
+                text-decoration: none;
+                font-family: "times new roman";
+                color: $FontColor;
+                text-align: center;
+                justify-self: center;
+                }
+            }
         }
     }
 }
@@ -224,6 +239,7 @@ footer { /*footerUnico*/
 .seccionDegrade {
     background: linear-gradient(#FFFFBF,#FF8F52);
     padding:2rem;
+    color:$FontColor;
     .primerosPasos {
         width: 50%;
         height: 50%;
@@ -235,9 +251,10 @@ footer { /*footerUnico*/
         }
     }
     h1{
-        text-align: justify;
+        text-align: center;
         padding-bottom: 1.2px;
         color:$FontColor;
+        font-family: "pacifico";
     }
     h3{
         padding: 1rem 0;
@@ -252,13 +269,16 @@ footer { /*footerUnico*/
                 color: $FontColor;
                 font-family: 'Times New Roman', Times, serif;
                 font-size: 18px;
+                a{
+                    color:$FontColor;
+                    font-weight: bold;
+                }
             }
         }
     }
     .articulo{
         display: flex;
     }
-
 /*finEstilosPrimerosPasos*/
 
 /*estilosDerechosDeberes*/
@@ -282,6 +302,7 @@ footer { /*footerUnico*/
                 border-radius: 40px 0;        
                 height: fit-content;
                 padding: 2rem 2rem;
+                box-shadow: 0 0 20px #4f9;
                 .card-title{
                     color:$FontColor;
                 }
@@ -313,6 +334,9 @@ footer { /*footerUnico*/
             .modal-content{
                 color: $FontColor;
                 background: $CardBackground;
+                .linkCards{
+                    z-index: 10000;
+                }
             }
         } 
     }
@@ -325,6 +349,10 @@ footer { /*footerUnico*/
     background: $CardBackground;
     height: 100%;
     border-radius: 0.6rem;
+    width: 80%;
+    box-shadow: 10px 10px;
+    color:$FontColor;
+
     .card-body{
         a {
             color: $FontColor;
@@ -334,7 +362,11 @@ footer { /*footerUnico*/
             color: $FontColor;
         } 
     }
-}    
+    .col{
+        padding: 0;
+    }
+}  
+
 /*finTransitandoElDuelo*/
 
 /*estilosContactos*/
@@ -464,12 +496,12 @@ footer { /*footerUnico*/
         font-size: 20px;
     }
     .texto{
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 @media only screen and (min-width:992px){ /*pantallaGrande*/
     .texto{
-        font-size: 18px;
+        font-size: 20px;
     }
     #gridContacto {
         display: grid;
@@ -478,10 +510,10 @@ footer { /*footerUnico*/
         grid-template-areas: 
                             "introduccion introduccion"
                             "form img";
-        }
+    }
     .imagenContacto {
         width:100%;
-        grid-area:img;
+        grid-area: img;
         justify-self: center;
         align-self:center;
     }
@@ -491,3 +523,134 @@ footer { /*footerUnico*/
         align-self:center;
     }              
 }
+/*estilosError404*/
+@import url(https://fonts.googleapis.com/css?family=Gilda+Display); /*importoFuente*/
+
+.paginaError {
+    background: radial-gradient(#000, #111);
+    color: white;
+    overflow: hidden;
+    height: 100%;
+    user-select: none;
+}
+
+.static {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    top: -100px;
+    opacity: 0.05;
+    z-index: 230;
+    user-select: none;
+    user-drag: none;
+}
+
+.error {
+    text-align: center;
+    font-family: 'Gilda Display', serif;
+    font-size: 95px;
+    font-style: italic;
+    text-align: center;
+    width: 100px;
+    height: 60px;
+    line-height: 60px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -60px;
+    right: 0;
+    animation: noise 2s linear infinite;
+    overflow: default;
+}
+
+.error:after {
+    content: '404';
+    font-family: 'Gilda Display', serif;
+    font-size: 100px;
+    font-style: italic;
+    text-align: center;
+    width: 150px;
+    height: 60px;
+    line-height: 60px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    color: blue;
+    animation: noise-1 .2s linear infinite;
+}
+
+.info {
+    text-align: center;
+    font-family: 'Gilda Display', serif;
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    text-decoration:none;
+    color: white;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    margin: auto;
+    position: absolute;
+    top: 140px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: noise-3 1s linear infinite;
+}
+
+.error:before {
+    content: '404';
+    font-family: 'Gilda Display', serif;
+    font-size: 100px;
+    font-style: italic;
+    text-align: center;
+    width: 100px;
+    height: 60px;
+    line-height: 60px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    color: red;
+    animation: noise-2 .2s linear infinite;
+    }
+
+    @keyframes noise-1 {
+    0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+    10% {opacity: .1;}
+    50% {opacity: .5; left: -6px;}
+    80% {opacity: .3;}
+    100% {opacity: .6; left: 2px;}
+}
+
+@keyframes noise-2 {
+    0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+    10% {opacity: .1;}
+    50% {opacity: .5; left: 6px;}
+    80% {opacity: .3;}
+    100% {opacity: .6; left: -2px;}
+}
+
+@keyframes noise {
+    0%, 3%, 5%, 42%, 44%, 100% {opacity: 1; transform: scaleY(1);}  
+    4.3% {opacity: 1; transform: scaleY(1.7);}
+    43% {opacity: 1; transform: scaleX(1.5);}
+}
+
+@keyframes noise-3 {
+    0%,3%,5%,42%,44%,100% {opacity: 1; transform: scaleY(1);}
+    4.3% {opacity: 1; transform: scaleY(4);}
+    43% {opacity: 1; transform: scaleX(10) rotate(60deg);}
+}
+
